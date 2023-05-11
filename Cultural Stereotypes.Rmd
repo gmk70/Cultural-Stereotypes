@@ -1,5 +1,5 @@
 ---
-title: "Untitled"
+title: "Cultural Stereotypes"
 author: "GMK"
 date: "2023-04-22"
 output: html_document
@@ -41,6 +41,7 @@ library(janitor)
 library(ggthemes)
 library(labeling)
 library(haven)
+library(tibble)
 ```
 ```{r}
 stereotypes <- read_csv("data/Cultural_Stereotypes_2022.csv")
@@ -154,5 +155,18 @@ MCB_Multi_by_Gender <- stereotypes %>%
   group_by(Race, Gender) %>%
   reframe(MCB_Multi) %>%
   drop_na(Race, Gender)
+```
+
+
+
+```{r}
+cultural_stereotypes_week8 <- read_csv("data/Cultural_Stereotypes_2022.csv") %>%
+  pivot_longer(cols = -Participant,
+               )
+```
+
+
+```{r}
+stereotypes_combined_2000_2010 <- read.csv("data/Stereotypes_Combined_Files_2010.csv")
 ```
 

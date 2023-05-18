@@ -1,8 +1,10 @@
 ---
 title: "Cultural Stereotypes"
 author: "GMK"
-date: "2023-04-22"
-output: html_document
+date: "2023-04-02"
+output:
+  pdf_document: default
+  html_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -19,7 +21,6 @@ When you click the **Knit** button a document will be generated that includes bo
 summary(cars)
 ```
 
-
 ## Including Plots
 
 You can also embed plots, for example:
@@ -29,65 +30,54 @@ plot(pressure)
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
-
-Working on github 
-
-connecting to gibhub with cultural stereotypes project
 ```{r}
 library(tidyverse)
-library(skimr)
 library(skimr)
 library(janitor)
 library(ggthemes)
 library(labeling)
 library(haven)
-library(tibble)
-```
-```{r}
-stereotypes <- read_csv("data/Cultural_Stereotypes_2022.csv")
-```
-```{r}
-show_col_types = FALSE
 ```
 
 ```{r}
 stereotypes <- read_csv("data/Cultural_Stereotypes_2022.csv")
 ```
+
+
 ```{r}
 stereotypes %>%
   count(Race)
 ```
 
 ```{r}
-ggplot(data = stereotypes, 
+ggplot(data = stereotypes,
        mapping = aes(x = Smart_M2,
                      y = MCB_Multi,
                      color = Race)) +
-  geom_point()+
-  scale_fill_manual(values = c("red", "blue", "orange", "green", "gray")) +
-  scale_y_continuous(limits = c(0, 8),
-                    breaks = seq(0, 8, by = 1)) +
-labs(title = "Multicultural Perspectives of Smart Stereotypes by Race",
-     x = "Smart Stereotype of Asian Americans",
-     y = "Multicultural Perspective",
-     fill = "") +
-  theme_clean()
+  geom_point() +
+    scale_fill_manual(values = c("red", "blue", "orange", "green", "gray")) +
+    scale_y_continuous(limits = c(0, 8),
+                     breaks = seq(0, 8, by = 1)) +
+  labs(title = "Multicultural Perspectives of Smart Stereotypes by Race",
+       x = "Smart Stereotype of Asian Americans",
+       y = "Multicultural Perspective",
+       fill = "") +
+  theme_clean() 
 ```
-
 ```{r}
 ggplot(data = stereotypes,
        mapping = aes(x = Smart_M2,
                      y = MCB_Blind,
                      color = Race)) +
   geom_point() +
-  scale_fill_manual(values = c("red", "blue", "orange", "green", "gray")) +
-  scale_y_continuous(limits = c(0, 8),
-                     breaks = seq(0, 8)) +
+    scale_fill_manual(values = c("red", "blue", "orange", "green", "gray")) +
+    scale_y_continuous(limits = c(0, 8),
+                     breaks = seq(0, 8, by = 1)) +
   labs(title = "Colorblind Perspectives of Smart Stereotypes by Race",
-       x = "Smart Stereotypes of Asian Americans",
+       x = "Smart Stereotype of Asian Americans",
        y = "Colorblind Perspective",
        fill = "") +
-  theme_clean()
+  theme_clean() 
 ```
 
 ```{r}
@@ -96,11 +86,11 @@ ggplot(data = stereotypes,
                      y = MCB_Multi,
                      fill = factor(Race))) +
   geom_point() +
-  scale_fill_brewer(palette = "Set1")
+  scale_fill_brewer(palette = "Set1") 
 ```
 ```{r}
 ggplot(data = stereotypes,
-       mapping = aes(x = Race, 
+       mapping = aes(x = Race,
                      y = MCB_Multi,
                      fill = factor(Race))) +
   geom_col(show.legend = FALSE) +
@@ -109,10 +99,9 @@ ggplot(data = stereotypes,
              show.legend = FALSE,
              color = "white") +
   scale_fill_brewer(palette = "Set1") +
-  scale_y_continuous(limits = c(0,8),
+  scale_y_continuous(limits = c(0, 8),
                      breaks = seq(0, 8, by = 1))
 ```
-
 ```{r}
 ggplot(data = stereotypes,
        mapping = aes(x = Gender,
@@ -125,60 +114,28 @@ ggplot(data = stereotypes,
                      breaks = seq(0, 8, by = 1))
 ```
 ```{r}
+MCB_Multi_by_Gender <- stereotypes %>% 
+  group_by(Gender, Race) %>% 
+  summarize(Avg_MCB_Multi = mean(MCB_Multi)) %>% 
+  drop_na()
+```
+
+```{r}
 ggplot(data = MCB_Multi_by_Gender,
        mapping = aes(x = Race,
-                     y = MCB_Multi,
+                     y = Avg_MCB_Multi,
                      fill = factor(Gender))) +
   geom_col(show.legend = FALSE) +
-  geom_text(aes(label = round(MCB_Multi, 1)),
-            vjust = 1.5,
-            show.legend = FALSE,
-            color = "white") +
+  geom_text(aes(label = round(Avg_MCB_Multi, 1)),
+             vjust = 1.5,
+             show.legend = FALSE,
+             color = "white") +
   scale_fill_brewer(palette = "Dark2") +
   scale_y_continuous(limits = c(0, 8),
-                    breaks = seq(0, 8, by = 1)) +
-  labs(title = "Multicultural Perspectives by Race and Gender", 
+                     breaks = seq(0, 8, by = 1)) +
+    labs(title = "Multicultural Perspectives by Race and Gender",
        y = "Multicultural Perspective",
        x = "") +
   theme_clean() +
-facet_wrap(~Gender)
+  facet_wrap(~Gender)
 ```
-```{r}
-stereotypes %>%
-  group_by(Race, Gender) %>%
-  summarize(MCB_Multi) %>%
-  drop_na(Race, Gender)
-```
-
-```{r}
-MCB_Multi_by_Gender <- stereotypes %>%
-  group_by(Race, Gender) %>%
-  reframe(MCB_Multi) %>%
-  drop_na(Race, Gender)
-```
-
-
-
-```{r}
-cultural_stereotypes_week8 <- read_csv("data/Cultural_Stereotypes_2022.csv") %>%
-  pivot_longer(cols = -Participant,
-               )
-```
-
-
-```{r}
-stereotypes_combined_2000_2010 <- read_csv("data/Stereotypes_Combined_Files_2010.csv") %>%
-```
-```{r}
-stereotypes_combined_short <- read_csv("data/Stereotypes_Combined_Files_short.csv") %>%
-  summarise(surveyyear, age, ethnicit, gender, targend, adjectiv) 
-```
-```{r}
-stereotypes_combined_short <- read_excel("data/Stereotypes_Combined_Files_short.xlsx") %>%
-  group_by(surveyyear) %>%
-  pivot_wider(id_cols= particip,
-              names_from = "adjectiv", 
-              values_from = "surveyyear") %>%
-  view()
-```
-

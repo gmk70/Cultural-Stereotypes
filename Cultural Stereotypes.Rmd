@@ -167,6 +167,10 @@ cultural_stereotypes_week8 <- read_csv("data/Cultural_Stereotypes_2022.csv") %>%
 
 
 ```{r}
-stereotypes_combined_2000_2010 <- read.csv("data/Stereotypes_Combined_Files_2010.csv")
+stereotypes_combined_2000_2010 <- read_csv("data/Stereotypes_Combined_Files_2010.csv")
+```
+```{r}
+stereotypes_combined_short <- read_csv("data/Stereotypes_Combined_Files_short.csv") %>%
+  pivot_wider(ids_cols = particip)
 ```
 

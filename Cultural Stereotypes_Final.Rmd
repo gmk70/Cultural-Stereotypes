@@ -1,0 +1,134 @@
+---
+title: "Cultural Stereotypes "
+author: "GMK"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+output:
+  html_document: default
+  theme: journal
+---
+
+##making changes
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(tidyverse)
+library(readxl)
+library(janitor)
+library(tibble)
+library(hrbrthemes)
+library(ragg)
+library(systemfonts)
+library(scales)
+library(shadowtext)
+library(patchwork)
+library(ggtext)
+```
+
+```{css, echo=FALSE}
+h1, h4 {
+  text-align: center;
+  color: black;
+  font-weight: bold;
+}
+```
+
+# Abstract
+This study examined stereotypes of Asian American males and females in the 1990s and 2000s. Although stereotypes of Asian Americans are assumed to be abundant and widely held, there is actually a dearth of systematic, empirical research that explores this claim. The existence of these stereotypes is often based on anecdotal evidence such as their widespread use of by the media in portraying and accounting for the behavior of Asian Americans. In light of these concerns, the authors assessed cultural stereotypes of Asian American males and females with two large samples in the 1990s and 2000s.  Using an updated version of the adjective list employed in the classic Princeton studies of stereotyping (Gilbert, 1951;  Karlins, Coffman, & Walters, 1969;  Katz & Braly, 1933) modified for use with Asian American targets, participants were asked to check those adjectives that they knew to be part of the cultural stereotype of Asian American males and females. This paper presents findings regarding (1) the degree to which these respondents employed a consistent stereotypic profile of Asian Americans, (2) differences and similarities in the profile for Asian American males and females, and (3) differences and similarities in the profile for Asian American males and females in the 1990s and 2000s, and (4) differences and similarities in stereotypes held by male versus female respondents, members of different ethnic groups, and those with different social class affiliations. Results are also discussed in light of controversies surrounding the notion of Asian Americans as the “model minority.”
+
+# Consistency in and Pervasiveness of Asian American Stereotypes
+
+Consistency in and Pervasiveness of Asian American Stereotypes
+     In 2011, Amy Chua released the “Battle Hymn of the Tiger Mother,” a book about the parenting style and the childrearing practices she employed to raise her own two kids.  Although presented in a mildly self-deprecating manner, she received much criticism about her austere parenting style, both from the mainstream and the Asian American community.  In 2012, the National Basketball Association witnessed the emergence of its first Asian American player, Jeremy Lin, a 23 year-old Harvard graduate who initially went undrafted but became wildly popular in New York and elsewhere. In less than a span of 25 games, Lin captivated the fans of New York and the NBA and the imaginations of Asians in the U.S. and the global context. Surprised experts provided commentary on the sudden rise of the first Asian American male NBA player in an arena dominated by African Americans and White Americans.  
+     In both cases, the media and the public relied on Asian American stereotypes to understand the experiences of Chua and Lin and, at the same time, and flamed the stereotypes of Asian American men and women to negatively characterize their experiences and success. On the one hand, reporters and experts used stereotypes to define and describe Amy Chua and Jeremy Lin. On the other hand, readers and fans relied on these stereotypes to make sense of and explain their experiences. Although these cases represent two individuals, on a larger scale they illustrate the ways in which people and institutions may stereotype a smaller community of people and the challenges these stereotypes may place on those who are targeted. For Asian Americans, they represent some of the challenges they face for a population that constitutes only 4.8% of the total U.S. population but whose success has been highly fragmented in various domains. Since 1990, Asian Americans have increased by 101%, with an increase of nearly 41% and 43% each decade. Their representation of the total U.S. population has increased from 2.9% in 1990 to 3.6% in 2000 to 4.8% in 2010 (note: conservative estimates using race alone because of 1990 data). In 2010, people of Asian descent had the second highest labor force participation at 64.7%, behind White Americans at 65.1% (2010). Among people age 25 and older participating in the labor force, 57% of Asian Americans had a bachelor’s degree or higher. In contrast, 35% of White Americans had a bachelor’s degree or higher. Asian Americans and White Americans were more likely to work in management, professional, and related occupations than other ethnic groups. Nearly half of Asian American men (48%) and women (46%) worked in these occupations, whereas 35% of White American men and 42% of women worked in the same occupations. Although Asian Americans accounted for 5% of the all workers in the United States, they represented a substantial percentage of “personal appearance workers” (51%), medical scientists and computer software engineers (28%), and physicians and surgeons (6%). 	In spite of this attention to Asian Americans success, there is actually a dearth of systematic, empirical research that explores this claim. Even in those few cases where empirical evidence of the stereotyping of Asian Americans (Bannai & Cohen, 1985;  Niemann, Jennings, Rozelle, Baxter, & Sullivan, 1994;  Toupin & Son, 1991;  Wong, Owen, Tran, Collins, & Higgins, 2012; Yee, 1992) and their impact on those who are targeted (Shen, Wang, & Swanson, 2011; Son & Shelton, 2011) have been presented, little effort has been made to determine how consistent these ideas are with regard to Asian American males versus females, or how widely held they are across different groups in the population, e.g., gender or ethnic.  This paper examines the cultural stereotypes of Asian American men and women in the 1990s and 2000s.
+
+# Research on Asian American Stereotypes
+A review of Asian American stereotypes represented largely by the popular press over the past forty years leads one to believe that, for the most part, descriptions of Asian Americans have changed from negative to positive since the mid-19th Century when Chinese workers first started to appear as gold miners and railroad workers in California.  At that time, they were described as “alien, insidious, and inscrutable,” an image that was largely disseminated by businessmen, politicians, and missionaries who had contact with them (Takaki, 1989;  Yee, 1992). The image of Asians Americans began to change in the late 1960s when they were described as persistent, hard working immigrants who achieved the “American dream.”  According to some (Lee, 1996;  Takaki, 1989), this perception was partly a result of the mounting struggle between White and Black America and the need for a "successful" minority group with which to discipline African Americans. This image of Asian Americans was crystallized in the mid-80’s when politicians and scholars lauded Asian Americans for their “success” in American society.  These portrayals emphasized strong family values, business savvy, and academic achievement, which have subsequently become the core of a model minority image of Asian Americans and has been used to explain their success and to motivate others….
+     Studies examining Asian American stereotypes generally portray a positive image of Asian Americans. This positive view of Asian Americans can, however, invoke both positive and negative emotions such as feelings of admiration for those who believe that Asian Americans are intelligent and obedient but also feelings of hostility and resentment (Ho & Jackson, 2001). However, recent studies have shown some diversity in stereotype content of Asian Americans as being competent but warm (Cuddy, Fiske, & Glick, 2007; Fiske, Cuddy, Glick, & Xu, 2002). These findings show that Asian Americans are envied groups similar to Jews where they are respected because of their perceived competence but disliked because of their perceived lack of warmth. More recently, Wong et al. (2012) investigated gender differences in Asian American stereotypes using open-ended responses and found specific stereotypes in reference to Asian American males. These included: a) interpersonal deficits, b) intelligence, c) intense diligence, d) unflattering physical attributes, e) physical ability distortions, f) perpetual foreigner, and g) sexual/romantic inadequacies. Using cluster analysis, these seven categories of stereotypes were then grouped into three clusters: “Body-Mind Stereotypes,” “Nerd Stereotypes,” and “Outsider Stereotypes.” 
+	
+Stereotype Content Model
+     While the body of literature in examining the implications of Asian American stereotypes on those who are targeted is limited, some recent studies have demonstrated the relationship between stereotypes and psychological outcomes. For example, in addition to identifying three clusters of Asian American male stereotypes, Wong et al. (2012) found that those Asian American participants who were more likely to report “Outsider Stereotypes” also reported higher levels of depressive symptoms relative to those who were more likely to report the other two clusters. Those who were grouped in the “Nerd Stereotypes” were more likely to report lower levels of the interdependent self-construal. While these findings demonstrate a relationship between stereotypes and psychological outcomes, they do not necessarily show that these participants have internalized the Asian American stereotypes. One study examined the extent to which Asian Americans internalize their racial stereotypes by developing the Internalization of Asian American Stereotypes Scale (IAASS; Shen, Wang, & Swanson, 2011). Findings from exploratory and confirmatory factor analyses showed a four-factor structure: a) “Difficulties with English Language Communication,” “Pursuit of Prestigious Careers,” “Emotional Reservation,” and “Expected Academic Success.” A study using a daily diary method showed that Asian American students with higher levels of stigma consciousness reported greater concerns about appearing intelligent in front of their European American roommates (Son & Shelton, 2011). They also reported greater anxiety and contact avoidance as well as greater perceived needs to adjust to their roommates. Interestingly, for Asian Americans with European American roommates, the relationships between stigma consciousness and greater anxiety and perceived need to adjust to their roommates were mediated by their concerns about appearing intelligent. Priming participants with Asian American stereotypes has been used to demonstrate the extent to which stereotypes can affect performance for Asian Americans and non-Asian Americans (Shih, Pittinsky, & Ambady, 1999). 
+
+# The Present Study
+The present study focuses on the cultural stereotypes of Asian American males and females among undergraduate students using an updated version of an adjective checklist procedure.  This study aims to address the following:  1) the degree to which these respondents employ a consistent stereotypic profile of Asian Americans; 2) differences and similarities in the profile for Asian American males and females;  3) differences and similarities in the profile for Asian American males and females, and 4) differences and similarities in stereotypes held by male vs. female respondents,  members of different ethnic groups (e.g., European American, Asian American, and African American/Hispanic/Biracial), and those with different social class backgrounds.
+
+# Method
+Participants  
+     The original sample of respondents included 151 Boston College undergraduate students from introductory and research methods psychology courses participating in a mass testing session in exchange for research participation credit.  11 respondents were dropped because of missing demographic information, reducing the total number of respondents to 140.  Of these respondents, 92 were female and 48 were male, with a mean age of 19.  The distribution of ethnicity among the respondents was the following:  White, 73.6 percent;  Asian American, 8 percent;  Hispanic American, 5.7 percent;  African American, 4.3 percent;  Biracial, 5 percent;  other (i.e., foreign exchange student), 3.6 percent.   
+     
+Procedure  
+     As part of a mass testing session conducted by the psychology department, respondents in groups of 50 to 100 were given a packet of several surveys that included our Adjective Checklist.  They were informed that all of their responses would be kept anonymous and that their participation was voluntary.  All respondents completed the surveys for mass testing within 1 hour.    
+     Adjective Checklist.  We studied stereotypes of Asian Americans using an updated version of the adjective list employed in the classic Princeton studies of stereotyping (Gilbert, 1951;  Karlins, Coffman, & Walters, 1969;  Katz & Braly, 1933) modified for use with Asian American targets.  All respondents were asked to list only cultural stereotypes of Asian Americans (i.e., commonly held beliefs about Asian Americans rather than personal beliefs about them).  Starting with the 84 adjectives initially used by Kats and Braly (1933), the list was independently modified by two research assistants and then reduced to 63 adjectives.       Respondents were informed that the purpose of the research was to obtain a better understanding of people's knowledge of and reactions to various social groups including Asian American males and females.  Using the updated version of the Adjective Checklist for Asian American targets, respondents were asked to check those adjectives that they knew to be part of the cultural stereotype for males and females whether or not they believed the stereotype to be true.  To control for order effects, the presentation of the Asian American male and female targets was randomized.  
+     Data organization.  Because of the evident overlap in the meaning of some of the adjectives in the checklist, three judges independently grouped the list of 63 terms into what they considered non-overlapping categories.  This procedure produced a reduced list of 25 characteristics which were subsequently used to conduct the main analyses for this report.  Findings based on the Total List of 63 adjectives are presented only for the sample as a whole.  Table 1 presents the Clustered List and the Total List.
+	
+# Results		
+Frequency Analysis  
+     Consistent with the procedures employed in most stereotype assessment research (Devine & Elliot, 1989;  Gilbert, 1951;  Karlins, Coffman, & Walters, 1969;  Katz & Braly, 1933;  Nieman, et al., 1994), frequency counts of adjectives were the main form of analysis in this study.  A common indicator of stereotype consistency is the Stereotype Uniformity Index (Devine & Elliot, 1995).  With this index, stereotype consistency is defined as the lowest number of adjectives that constitute 50 percent of the overall number of adjectives selected by respondents.  The adjectives that constitute this 50 percent represent a Stereotype Uniformity Index.  This Index provides a simple “snapshot” of adjectives that are highly representative of target groups (Devine & Elliot, 1995).  Unless otherwise indicated, all analyses employed this procedure.  Stereotype Uniformity in the perception of male and female Asian Americans was analyzed for male versus female respondents, and members of different ethnic and social class groups.  
+     Cultural Stereotype of Asian American Males and Females.   In table 2, Stereotype Uniformity for Asian American male and female targets based on the Total List of 63 adjectives is provided.  Thirteen adjectives account for 50 percent of the total number of responses for Asian American males and fourteen for Asian American females.  If each of the 63 adjectives was randomly selected, 31.5 adjectives would have accounted for 50 percent of all responses.  Nine of these adjectives are overlapping for the male and female target.  The adjectives "industrious,” “ambitious,” and “efficient” are unique to Asian American males;  “faithful,” “courteous,” “secretive,” and “dependent” are unique to Asian American females.        
+
+In table 3, Stereotype Uniformity using the Clustered List for the Asian American male and female target is provided.  It appears that the same four categories represent both Asian American males and females.  It is also interesting that among the three next most frequently attributed characteristics for Asian American males is “aggressive/ambitious” and for females, “sexual/exotic.”
+     Cultural Stereotypes by Gender of Respondent.  Given an evident consistent stereotype profile for Asian American males and females for the sample as a whole, we next examined how varied the stereotypes are when respondents are compared according to their gender, ethnicity, and parents' occupations.  In these comparisons, only the Clustered List was used.  Four categories were consistently used by both female and male respondents for Asian American males and females.  Beyond the 50 percent mark, male and female respondents attributed different characteristics for Asian American male and female target (see Table 4).     
+Cultural Stereotypes by Ethnicity of Respondents. Three groups form the basis for this analysis:  European Americans (73.6%), African American/Hispanic/Biracial/Other (18.6%), and Asian Americans (8%).  Responses from African Americans, Hispanic Americans, Biracial, and Other were combined due to the small number of respondents in each group.  Table 5 indicates that “passive/withdrawing,” “traditional/familial,” and “methodical/persistent” are consistently included in the top 50 percent of the responses and in the same order across all ethnic groups.  Still, there is variability for female target versus male target.  A differentiated profile of Asian American females emerges when different ethnic groups are examined.  It appears that European American respondents had a more differentiated perception of Asian American females than the other two groups of respondents.  Further, “sexual/erotic” was used to characterize Asian American females more often by European American and Asian American respondents than African American/Hispanic/Biracial/Other respondents.  Any findings, however, must be treated cautiously in view of the limited Asian American sample size and the grouping of African American, Hispanic, and biracial respondents.
+
+Cultural Stereotypes by Social Class.  Only 106 respondents were used in this comparison.  Of these, 91 respondents were from families where working parents, fathers, mothers, or both, were employed as professionals/technical workers/upper level business (e.g., teachers, physicians, executives), 15 respondents had parents who, if working, were employed either in clerical/sales positions (e.g., insurance agents, bank teller), or blue collar jobs (e.g., machinists, firemen).  This is clearly a skewed sample with a heavy representation of economically privileged respondents.  Therefore, findings involving occupational level must be treated cautiously.  Similar to the previous analyses, there is a clear consistency in the same four categories representing Asian American males and females.  The only difference is a slight change in the rank order for the Asian American male target categories.
+
+```{r}
+read_excel("data/stereotypes_intelligent.xlsx") %>%
+  clean_names() %>% 
+  mutate(surveyyear = as.character(surveyyear)) %>% 
+  ggplot(aes(x = percent_intelligent,
+             y = race,
+             color = surveyyear)) +
+  geom_point() +
+  scale_x_continuous(limits = c(0, 1),
+                     breaks = seq(from = 0,
+                                  to = 1,
+                                  by = .10)) +
+  scale_color_manual(values = c(
+    "1996" = "orange",
+    "2004" = "#323ea8",
+    "2020" = "red"
+  )) +
+  labs(title = "Percent Stereotype of Intelligent for Asian Americans:", subtitle = "From <span style ='color:orange'>1996</span> to <span style='color:#323ea8'>2004</span> to <span style='color:red'>2020</span>") +
+  theme_minimal() +
+  theme(
+    panel.grid.major.x = element_blank(),
+    panel.grid.minor.x = element_blank(),
+    legend.position = "none",
+    axis.title = element_blank(),
+    plot.subtitle = element_markdown()
+  )
+```
+
+```{r}
+read_excel("data/stereotypes_reserved.xlsx") %>%
+  clean_names() %>% 
+  mutate(surveyyear = as.character(surveyyear)) %>% 
+  ggplot(aes(x = percent_reserved,
+             y = race,
+             color = surveyyear)) +
+  geom_point() +
+  scale_x_continuous(limits = c(0, 1),
+                     breaks = seq(from = 0,
+                                  to = 1,
+                                  by = .10)) +
+  scale_color_manual(values = c(
+    "1996" = "orange",
+    "2004" = "#323ea8",
+    "2020" = "red"
+  )) +
+  labs(title = "Percent Stereotype of Reserved for Asian Americans:", subtitle = "From <span style ='color:orange'>1996</span> to <span style='color:#323ea8'>2004</span> to <span style='color:red'>2020</span>") +
+  theme_minimal() +
+  theme(
+    panel.grid.major.x = element_blank(),
+    panel.grid.minor.x = element_blank(),
+    legend.position = "none",
+    axis.title = element_blank(),
+    plot.subtitle = element_markdown()
+  )
+```
+
+# Discussion
+The primary focus of this study was to examine the extent to which a consistent and widely shared cultural stereotype of Asian Americans exist.  Our findings indicate that there is a clear and consistent stereotype of Asian American males and females.  It appears that four categories consistently represent a core profile for both groups.  Particularly for gender and social class groups, Asian American males and females are seen as “passive/withdrawing,” “traditional/familial,” “smart/intellectual,” and “methodical/persistent.”  Differences occur in two ways when categories beyond the 50 percent mark are examined.  Descriptions such as “aggressive/ambitious,” “sly/secretive,” and “avante-garde/individualistic,” for the Asian American male target and “patient/caring” and “sexual/exotic” for the Asian American female target are unique to each group.  Also, European American respondents appear to have a more differentiated stereotype profile of Asian American females than do African American/Hispanic/Biracial/Other respondents that includes qualities of the exotic, nurturant female.  It is interesting that our few Asian American respondents fall midway between these groups having internalized with somewhat less consistency than European Americans a sexualized/feminized image of Asian American women.  Why these ethnic patterns differ and how reliable they are deserves closer examination based on more adequate samples of minority respondents which would also permit analysis by respondent gender.  Overall, these descriptions are consistent with stereotypes of Asian Americans that many have described anecdotally.  They conform to the image of Asian Americans as the model minority and reflect, for Asian American females, some continuation of an exoticized representation that long precedes the contemporary view of Asian Americans as the “good” minority.  
+
+# Future Research
+In the stereotype literature, most studies focus on the formation of stereotypes but generally fail to address how people react to stereotypes.  One exception is Claude Steele and his colleagues (1995, 1997) who have examined how negative societal stereotypes affect the academic performance of women and African Americans in academic testing situations.  Their findings demonstrate powerfully the effects of negative societal stereotypes on the test performance of those who are their targets.  But what are the consequences of a societal stereotype that has the superficial appearance of being positive?  Some researchers have questioned the accuracy of the model minority stereotype in representing Asian Americans (Lee, 1996;  Takaki, 1989;  Toupin & Son, 1991).  They argue that the model minority stereotype is a myth that fails to account for considerable variability and diversity in the Asian American community.  In effect, Asian Americans are seen as permanent immigrants with a monolithic culture that leads them to adapt to white middle class standards to “succeed” (Lee, 1996).  In a study that examined the model minority stereotype, Toupin and Son (1991) demonstrated that all Asian Americans are not aware of the model minority stereotype, and, yet, may be vulnerable to fulfilling the expectations that accompany it, often at the cost of their developmental and psychological well-being.  Furthermore, being cast as the model minority pits Asian Americans against other minority groups no doubt with important personal and interpersonal consequences for all parties.  Future research needs to focus more on these kinds of outcomes bearing in mind that stereotypes about Asian Americans have roots in the larger context of the politics of multiracial society.
